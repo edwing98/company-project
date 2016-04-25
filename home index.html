@@ -1,0 +1,289 @@
+<!doctype html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+        
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-1.12.2.js" integrity="sha256-VUCyr0ZXB5VhBibo2DkTVhdspjmxUgxDGaLQx7qb7xY=" crossorigin="anonymous"></script>
+          <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>    
+    
+       <link rel="stylesheet" type="text/css" href="media/style.css">
+          <script>
+              jQuery(document).ready(function($) {
+     
+            $('#myCarousel').carousel({interval: 5000 });
+     
+            $('#carousel-text').html($('#slide-content-0').html());
+     
+            //Handles the carousel thumbnails
+           $('[id^=carousel-selector-]').click( function(){
+                var id = this.id.substr(this.id.lastIndexOf("-") + 1);
+                var id = parseInt(id);
+                $('#myCarousel').carousel(id);
+            });
+     
+     
+            // When the carousel slides, auto update the text
+            $('#myCarousel').on('slid.bs.carousel', function (e) {
+                     var id = $('.item.active').data('slide-number');
+                    $('#carousel-text').html($('#slide-content-'+id).html());
+            });
+            });
+            
+            
+        </script>
+        
+    </head>
+    <body>
+        <div class="navbar-wrapper">
+          <div class="container">
+    
+            <nav class="navbar navbar-inverse navbar-static-top">
+              <div class="container">
+                <div class="navbar-header">
+                  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </button>
+                  <a class="navbar-brand" href="#">Quality AutoMart</a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                  <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Home</a></li>
+                    <li><a href="#about">Special Offers</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                    <li class="dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Find a Vehicle<span class="caret"></span></a>
+                      <ul class="dropdown-menu">
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Another action</a></li>
+                        <li><a href="#">Something else here</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li class="dropdown-header">Nav header</li>
+                        <li><a href="#">Separated link</a></li>
+                        <li><a href="#">One more separated link</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </nav>
+    
+          </div>
+        </div>
+        
+        <div class="container">
+          <ul class="tabs"></ul>
+          <div class="clearfix">
+            <div class="tab-content">
+              <div ng-transclude></div>
+              
+            </div>
+          </div>
+        </div>
+        
+        
+        
+        
+        
+        
+        <div class="container">
+            <div id="main_area">
+                    <!-- Slider -->
+                    <div class="row">
+                        <div class="col-xs-12" id="slider">
+                            <!-- Top part of the slider -->
+                            <div class="row">
+                                <div class="col-sm-8" id="carousel-bounding-box">
+                                    <div class="carousel slide" id="myCarousel">
+                                        <!-- Carousel items -->
+                                        <div class="carousel-inner">
+                                            <div class="active item" data-slide-number="0">
+                                            <img src="media/car0.jpg" alt="car0" width="800" height="447"></div>
+    
+                                            <div class="item" data-slide-number="1">
+                                            <img src="media/car1.jpg" alt="car1" width="800" height="447"></div>
+    
+                                            <div class="item" data-slide-number="2">
+                                            <img src="media/car2.jpg" alt="car2" width="800" height="447"></div>
+    
+                                            <div class="item" data-slide-number="3">
+                                            <img src="media/car3.jpg" alt="car3" width="800" height="447"></div>
+    
+                                            <div class="item" data-slide-number="4">
+                                            <img src="media/car4.jpg" alt="car4" width="800" height="447"></div>
+    
+                                            <div class="item" data-slide-number="5">
+                                            <img src="media/car5.jpg" alt="car5" width="800" height="447"></div>
+                                            
+                                            <div class="item" data-slide-number="6">
+                                            <img src="media/car6.jpg" alt="car6" width="800" height="447"></div>
+                                            
+                                             <div class="item" data-slide-number="7">
+                                            <img src="media/car7.jpg" alt="car7" width="800" height="447"></div>
+                                            
+                                            <div class="item" data-slide-number="8">
+                                            <img src="media/car8.jpg" alt="car8" width="800" height="447"></div>
+                                        
+                                        
+                                        </div><!-- Carousel nav -->
+                                        
+                                       
+                                        
+                                        <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                                            <span class="glyphicon glyphicon-chevron-left"></span>                                       
+                                        </a>
+                                        <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                                            <span class="glyphicon glyphicon-chevron-right"></span>                                       
+                                        </a>                                
+                                        </div>
+                                </div>
+    
+                                <div class="col-sm-4" id="carousel-text"></div>
+    
+                                <div id="slide-content" style="display: none;">
+                                    <div id="slide-content-0">
+                                        <h2>Classic</h2>
+                                        <p>1989 TOYOTA CAMRY LE</p>
+                                        <p class="sub-text">PRICE: $2,495 <a href="#"></a></p>
+                                        <p class="sub-text">STYLE: Classic <a href="#"></a></p>
+                                        <p class="sub-text">MILEAGE: Call for mileage details <a href="#"></a></p>
+                                        <p class="sub-text">EXTERIOR COLOR: Black <a href="#"></a></p>
+                                        <p class="sub-text">INTERIOR COLOR: Gray <a href="#"></a></p>
+                                    </div>
+    
+                                    <div id="slide-content-1">
+                                        <h2>Compact</h2>
+                                        <p>Lorem Ipsum Dolor</p>
+                                        <p class="sub-text">PRICE: $4,495 <a href="#"></a></p>
+                                        <p class="sub-text">PRICE: $4,495<a href="#"></a></p>
+                                        <p class="sub-text">MILEAGE: Call for mileage details. <a href="#"></a></p>
+                                        <p class="sub-text">EXTERIOR COLOR: Gray <a href="#"></a></p>
+                                        <p class="sub-text">INTERIOR COLOR: Gray <a href="#"></a></p>
+                                    </div>
+    
+                                    <div id="slide-content-2">
+                                        <h2>Convertible</h2>
+                                        <p>2013 AUDI 2.0T</p>
+                                        <p class="sub-text">PRICE: Call about pricing  <a href="#"></a></p>
+                                        <p class="sub-text">STYLE: Convertible <a href="#"></a></p>
+                                        <p class="sub-text">MILEAGE: Call for mileage details <a href="#"></a></p>
+                                        <p class="sub-text">EXTERIOR COLOR: Black <a href="#"></a></p>
+                                        <p class="sub-text">INTERIOR COLOR: Tan <a href="#"></a></p>
+                                    </div>
+    
+                                    <div id="slide-content-3">
+                                        <h2>Coupe</h2>
+                                        <p>2007 VOLKSWAGON BEETLE</p>
+                                        <p class="sub-text">PRICE: $7,995 <a href="#"></a></p>
+                                        <p class="sub-text">STYLE: Coupe <a href="#"></a></p>
+                                        <p class="sub-text">MILEAGE: Call for mileage details <a href="#"></a></p>
+                                        <p class="sub-text">EXTERIOR COLOR: Red <a href="#"></a></p>
+                                        <p class="sub-text">INTERIOR COLOR: Tan <a href="#"></a></p>
+                                    </div>
+    
+                                    <div id="slide-content-4">
+                                        <h2>SUV</h2>
+                                        <p>2011 KIA SOUL</p>
+                                        <p class="sub-text">PRICE: $9,495 <a href="#"></a></p>
+                                        <p class="sub-text">STYLE: SUV <a href="#"></a></p>
+                                        <p class="sub-text">MILEAGE: Call for mileage details <a href="#"></a></p>
+                                        <p class="sub-text">EXTERIOR COLOR: White <a href="#"></a></p>
+                                        <p class="sub-text">INTERIOR COLOR: Gray <a href="#"></a></p>
+                                    </div>
+    
+                                    <div id="slide-content-5">
+                                        <h2>Sedan</h2>
+                                        <p>2007 CADILLAC DTS</p>
+                                        <p class="sub-text">PRICE: $10,900 <a href="#"></a></p>
+                                        <p class="sub-text">STYLE: Sedan <a href="#"></a></p>
+                                        <p class="sub-text">MILEAGE: Call for mileage details <a href="#"></a></p>
+                                        <p class="sub-text">EXTERIOR COLOR: Purple <a href="#"></a></p>
+                                        <p class="sub-text">INTERIOR COLOR: Gray <a href="#"></a></p>
+                                        
+                                    </div>
+                                    
+                                      <div id="slide-content-6">
+                                        <h2>Sport</h2>
+                                        <p>2000 FORD MUSTANG GT </p>
+                                         <p class="sub-text">October 24 2014 - <a href="#"></a></p>
+                                         
+                                        
+                                    </div>
+                                    
+                                       <div id="slide-content-7">
+                                        <h2>Truck</h2>
+                                        <p>Lorem Ipsum Dolor</p>
+                                        <p class="sub-text">October 24 2014 - <a href="#">Read more</a></p>
+                                    </div>
+                                    
+                                     <div id="slide-content-8">
+                                        <h2>Van</h2>
+                                        <p>Lorem Ipsum Dolor</p>
+                                        <p class="sub-text">October 24 2014 - <a href="#">Read more</a></p>
+                                    </div>
+                                
+                                
+                                </div>
+                            </div>
+                        </div>
+                    </div><!--/Slider-->
+    
+                    <div class="row hidden-xs" id="slider-thumbs">
+                            <!-- Bottom switcher of slider -->
+                            <ul class="hide-bullets">
+                                <li class="col-sm-2">
+                                    <a class="thumbnail" id="carousel-selector-0"><img src="media/car0.jpg" alt="car0"></a>
+                                </li>
+    
+                                <li class="col-sm-2">
+                                    <a class="thumbnail" id="carousel-selector-1"><img src="media/car1.jpg" alt="car1"></a>
+                                </li>
+    
+                                <li class="col-sm-2">
+                                    <a class="thumbnail" id="carousel-selector-2"><img src="media/car2.jpg" alt="car2"></a>
+                                </li>
+    
+                                <li class="col-sm-2">
+                                    <a class="thumbnail" id="carousel-selector-3"><img src="media/car3.jpg" alt="car3"></a>
+                                </li>
+    
+                                <li class="col-sm-2">
+                                    <a class="thumbnail" id="carousel-selector-4"><img src="media/car4.jpg" alt="car4"></a>
+                                </li>
+    
+                                <li class="col-sm-2">
+                                    <a class="thumbnail" id="carousel-selector-5"><img src="media/car5.jpg" alt="car5"></a>
+                                </li>
+                                
+                                <li class="col-sm-2">
+                                    <a class="thumbnail" id="carousel-selector-6"><img src="media/car6.jpg" alt="car6"></a>
+                                </li>
+                                
+                                <li class="col-sm-2">
+                                    <a class="thumbnail" id="carousel-selector-7"><img src="media/car7.jpg" alt="car7"></a>
+                                </li>
+                                
+                                 <li class="col-sm-2">
+                                    <a class="thumbnail" id="carousel-selector-8"><img src="media/car8.jpg" alt="car8"></a>
+                                </li>
+                            
+                            
+                            
+                            </ul>                 
+                    </div>
+                 </div>
+           </div>   
+           
+           
+            
+    </body>
+    </html>
